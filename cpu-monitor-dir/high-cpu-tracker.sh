@@ -7,9 +7,9 @@ MAX_PROCESSES_PER_MEASUREMENT=5
 INTERVAL_SECONDS=5
 TOTAL_MEASUREMENTS=12
 
-LOG_DIR="$HOME/logs/system-monitor"
+LOG_DIR="$HOME/bin/cpu-monitor-dir/logs/"
 mkdir -p "$LOG_DIR"
-LOG_FILE="$LOG_DIR/cpu_monitor_$(date +%Y%m%d_%H%M%S).json"
+LOG_FILE="$LOG_DIR/cpu_monitor_log_$(date +%Y%m%d_%H%M%S).json"
 
 function generateHeader() {
     cat <<EOF

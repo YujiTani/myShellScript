@@ -1,0 +1,114 @@
+{
+    "execution_timestamp": "2025-06-22T08:41:04+09:00",
+    "system_info": {
+        "cpu_cores": 4,
+        "load_average": "7.35 18.54 44.17",
+        "uptime": "6 days"
+    },
+    "monitoring_config": {
+        "cpu_threshold_percent": 10,
+        "max_processes_per_measurement": 5,
+        "measurement_interval_seconds": 5,
+        "total_measurements": 12
+    },
+    "measurements": [
+        {
+            "measurement": 1,
+            "timestamp": "2025-06-22T08:41:04+09:00",
+            "processes": [
+                {"pid":59980,"cpu":21.1,"mem":1.1,"time":"26:04.59","command":"/Applications/Warp.app/Contents/MacOS/stable"},
+                {"pid":4922,"cpu":17.7,"mem":1.0,"time":"5:39.52","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"}
+            ]
+        },
+        {
+            "measurement": 2,
+            "timestamp": "2025-06-22T08:41:09+09:00",
+            "processes": [
+                {"pid":4922,"cpu":15.9,"mem":1.0,"time":"5:40.45","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"}
+            ]
+        },
+        {
+            "measurement": 3,
+            "timestamp": "2025-06-22T08:41:14+09:00",
+            "processes": [
+                {"pid":59980,"cpu":20.9,"mem":1.1,"time":"26:05.30","command":"/Applications/Warp.app/Contents/MacOS/stable"},
+                {"pid":4922,"cpu":18.5,"mem":1.0,"time":"5:41.38","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"},
+                {"pid":342,"cpu":15.3,"mem":0.7,"time":"1:45.87","command":"claude"},
+                {"pid":148,"cpu":11.2,"mem":0.6,"time":"170","command":"580:17.34"}
+            ]
+        },
+        {
+            "measurement": 4,
+            "timestamp": "2025-06-22T08:41:19+09:00",
+            "processes": [
+                {"pid":59980,"cpu":32.7,"mem":1.1,"time":"26:05.92","command":"/Applications/Warp.app/Contents/MacOS/stable"},
+                {"pid":342,"cpu":29.0,"mem":0.7,"time":"1:46.21","command":"claude"},
+                {"pid":4922,"cpu":18.3,"mem":1.0,"time":"5:42.37","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"},
+                {"pid":148,"cpu":13.3,"mem":0.6,"time":"170","command":"580:17.78"}
+            ]
+        },
+        {
+            "measurement": 5,
+            "timestamp": "2025-06-22T08:41:25+09:00",
+            "processes": [
+                {"pid":59980,"cpu":20.1,"mem":1.1,"time":"26:06.39","command":"/Applications/Warp.app/Contents/MacOS/stable"},
+                {"pid":4922,"cpu":18.6,"mem":1.0,"time":"5:43.36","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"},
+                {"pid":342,"cpu":13.9,"mem":0.7,"time":"1:46.49","command":"claude"},
+                {"pid":148,"cpu":10.5,"mem":0.6,"time":"170","command":"580:18.10"}
+            ]
+        },
+        {
+            "measurement": 6,
+            "timestamp": "2025-06-22T08:41:30+09:00",
+            "processes": [
+                {"pid":4922,"cpu":16.2,"mem":1.0,"time":"5:44.27","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"},
+                {"pid":10648,"cpu":15.7,"mem":0.1,"time":"0:00.17","command":"/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared"}
+            ]
+        },
+        {
+            "measurement": 7,
+            "timestamp": "2025-06-22T08:41:35+09:00",
+            "processes": [
+                {"pid":4922,"cpu":22.8,"mem":1.0,"time":"5:45.28","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"}
+            ]
+        },
+        {
+            "measurement": 8,
+            "timestamp": "2025-06-22T08:41:40+09:00",
+            "processes": [
+                {"pid":1,"cpu":34.5,"mem":0.1,"time":"170","command":"30:44.27"},
+                {"pid":4922,"cpu":15.3,"mem":1.0,"time":"5:46.13","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"}
+            ]
+        },
+        {
+            "measurement": 9,
+            "timestamp": "2025-06-22T08:41:46+09:00",
+            "processes": [
+                {"pid":4922,"cpu":16.4,"mem":1.0,"time":"5:47.05","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"}
+            ]
+        },
+        {
+            "measurement": 10,
+            "timestamp": "2025-06-22T08:41:51+09:00",
+            "processes": [
+                {"pid":4922,"cpu":13.8,"mem":1.0,"time":"5:47.83","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"},
+                {"pid":148,"cpu":12.9,"mem":0.6,"time":"170","command":"580:19.43"}
+            ]
+        },
+        {
+            "measurement": 11,
+            "timestamp": "2025-06-22T08:41:56+09:00",
+            "processes": [
+                {"pid":59980,"cpu":18.0,"mem":1.1,"time":"26:08.76","command":"/Applications/Warp.app/Contents/MacOS/stable"},
+                {"pid":4922,"cpu":14.7,"mem":1.0,"time":"5:48.77","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"}
+            ]
+        },
+        {
+            "measurement": 12,
+            "timestamp": "2025-06-22T08:42:01+09:00",
+            "processes": [
+                {"pid":4922,"cpu":16.3,"mem":1.0,"time":"5:49.72","command":"/Applications/Arc.app/Contents/Frameworks/ArcCore.framework/Helpers/Browser"}
+            ]
+        }
+    ]
+}
