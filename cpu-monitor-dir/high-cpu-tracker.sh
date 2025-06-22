@@ -30,50 +30,45 @@ function generateHeader() {
 EOF
 }
 
-function generateBody() {
+function generateBody {
     for i in $(seq 1 $TOTAL_MEASUREMENTS); do
         echo "測定 $i/$TOTAL_MEASUREMENTS..." >&2
 
         cat <<EOF
         {
-            "measurement": $i,
             "timestamp": "$(date -Iseconds)",
             "processes": [
 EOF
 
-        # CPU率が10%以上のプロセス上位5を検出
-        ps aux | awk -v threshold=$CPU_THRESHOLD_PERCENT '$3 > threshold {
-            if (process_count > 0) print ","
-            printf "                {\"pid\":%s,\"cpu\":%s,\"mem\":%s,\"time\":\"%s\",\"command\":\"%s\"}", $2, $3, $4, $10, $11
-            process_count++
-        }' | head -$MAX_PROCESSES_PER_MEASUREMENT
-
+        getHighCpuProcesses
         cat <<EOF
 
             ]
         }$([ $i -lt $TOTAL_MEASUREMENTS ] && echo ",")
+    ]
 EOF
 
         [[ $i -lt $TOTAL_MEASUREMENTS ]] && sleep $INTERVAL_SECONDS
     done
 }
 
-function generateFooter() {
-    cat <<EOF
-    ]
+# CPU率が10%以上のプロセス上位5を検出
+function getHighCpuProcesses() {
+    ps aux | awk -v threshold=$CPU_THRESHOLD_PERCENT '$3 > threshold {
+        if (process_count > 0) print ","
+            printf "                {\"pid\":%s,\"cpu\":%s,\"mem\":%s,\"time\":\"%s\",\"command\":\"%s\"}", $2, $3, $4, $10, $11
+            process_count++
+        }' | head -$MAX_PROCESSES_PER_MEASUREMENT
 }
-EOF
-}
+
 
 function main() {
     echo "🚀プロセスチェック開始"
     {
         generateHeader
         generateBody
-        generateFooter
     } > "$LOG_FILE"
     echo "✅ チェック完了: $LOG_FILE"
-    echo "📊 ファイルサイズ: $(ls -lh "$LOG_FILE" | awk '{print $5}')"
 }
 
 main "$@"
